@@ -15,7 +15,7 @@ namespace BowlingScoreBoard
         public bool FrameHasASpare => FirstRoll + SecondRoll == 10  && !FrameHasAStrike;
         public bool FrameHasAStrike => FirstRoll == 10;
         
-        public int? AggregatedScore =>  PreviousFrame?.AggregatedScore + Score ?? Score;
+        public int? AggregatedScore =>  (PreviousFrame?.AggregatedScore + Score) ?? Score;
         public int? Score
         {
             get
