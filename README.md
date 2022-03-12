@@ -28,7 +28,7 @@ I have in some cases ignored the performance - for instance in the calculation o
 With this implementation when aggregated score property is called by the Pretty Printer for each Frame then the same calculation are done multiple times.
 However these are in memory calculation for max 10 frames and the purpose of the scoreboard printer is very unlikely to be high Performance and with this implementation we instead get the very readable code:
 
-*public int? AggregatedScore =>  PreviousFrame?.AggregatedScore + Score ?? Score;*
+*public int? AggregatedScore =>  (PreviousFrame?.AggregatedScore + Score) ?? Score;*
 
 
 ## When I look at the code
