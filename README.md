@@ -17,7 +17,7 @@ Again I felt I ended a nice place and kept the implementation - an alternative c
 
 ## ScoreBoard
 The ScoreBoard class turned out to be pretty lean. As the program evolved much of the work could be delegated to state changes in a Frame or to the IPrettyPrinter interface which is responsible for printing the score board in form of a string.
-It only needed to know about the first frame (used when printing a scoreboard) and the last (actualFrame).
+Hence ScoreBoard only needed to know about the first frame (used when printing a scoreboard) and the last (actualFrame).
 
 ## IPrettyPrinter interface and HorizontalPrettyPrinter
 I created the IPrettyPrinter interface to be injected into the score board class. It is - as the name suggest - responsible for printing the score board - in this simple case as a string to be written for instance in the console view. HorizontalPrettyPrinter implements this interface and provides a horisontal print inspired by the one in the assignment. You could also create a VerticalPrettyPrinter implementation that would look more like the one you meet in the bowling alley.
