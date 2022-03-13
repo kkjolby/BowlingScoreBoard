@@ -16,7 +16,7 @@ I have used a linked list approach to link the Frames together as can be seen in
 Again I felt I ended a nice place and kept the implementation - an alternative could of course be to have a List of Frames in the ScoreBoard class. 
 
 ## ScoreBoard
-The ScoreBoard class turned out to be pretty lean. As the program evolved much of the work could be delegated to state changes in a Frame or to the IPrettyPrinter interface which has becomed responsible for printing the score board in form of a string.
+The ScoreBoard class turned out to be pretty lean. As the program evolved much of the work could be delegated to state changes in a Frame or to the IPrettyPrinter interface which is responsible for printing the score board in form of a string.
 It only needed to know about the first frame (used when printing a scoreboard) and the last (actualFrame).
 
 ## IPrettyPrinter interface and HorizontalPrettyPrinter
