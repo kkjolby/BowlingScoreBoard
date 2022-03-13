@@ -9,11 +9,11 @@ This has resulted in three classes:
 ## Frame
 Frame is modelling a single frame in the scoreboard - storing information of the pins knocked down in first and second roll of the frame.
 I wondered if I should modulate a Roll also but decided to keep the Rolls as nullable int and revisit the decision if I felt the need to. 
-It turned out that nullable int worked fined as can be seen in the relative simple implementation of the Score property (Here the nullable part really helps in determining if a Score is undetermined - returns null) 
+It turned out that nullable int worked fined as can be seen in the relative simple implementation of the Score property. Here the nullable part really helps in determining if a Score is undetermined - returns null) 
 I have never used so many ? in a class before :)
 
-I have used a linked list approach to link the Frames together as can be seen in the properties Previous Frame and NextFrame. I started out with a link list approach because of the way a score is calculated - to calculate aggregated score you need the aggregated score of the previous and to calculate score you need to know about the pins knocked down in the next frame).
-Again I felt i ended a nice place and kept the implementation like this - an alternative could of course be to have a List of Frames in the ScoreBoard class. 
+I have used a linked list approach to link the Frames together as can be seen in the properties Previous Frame and NextFrame. I started out with a link list approach because of the way a score is calculated - to calculate aggregated score you need the aggregated score of the previous and to calculate score you need to know about the pins knocked down in the next frame.
+Again I felt I ended a nice place and kept the implementation - an alternative could of course be to have a List of Frames in the ScoreBoard class. 
 
 ## ScoreBoard
 The ScoreBoard class turned out to be pretty lean. As the program evolved much of the work could be delegated to state changes in a Frame or to the IPrettyPrinter interface which has becomed responsible for printing the score board in form of a string.
